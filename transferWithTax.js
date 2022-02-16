@@ -25,6 +25,7 @@ function chargeTaxForTransfer(balance, transferAmount) {
         floatTax = 1.10
     }
     const amountWithTax =(transferAmount*floatTax) + minTax;
+    
     if (amountWithTax >= balance){
         throw new Error('Saldo Insuficiente')
     }
